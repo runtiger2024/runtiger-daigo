@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// --- 資料庫來源設定 (已還原為 PostgreSQL) ---
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 您可以將之前的 SQLite 設定區塊刪除，或繼續用 // 註解掉
+// datasource db {
+//   provider = "sqlite"
+//   url      = "file:./dev.db"
+// }
+
+
+// --- 資料模型定義 (完整版) ---
+
+model SiteSettings {
+  id                 Int      @id @default(autoincrement())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  websiteName        String   @default("CHARLINe")
+  primaryColor       String   @default("#FF5700")
+  fontFamily         String   @default("'Noto Sans TC', sans-serif")
+  enableDarkMode     Boolean  @default(false)
+  showReminderBox    Boolean  @default(true)
+  heroImageUrl       String   @default("https://images.unsplash.com/photo-1599330293288-c8352b2d_01e0?q=80&w=1974&auto=format&fit=crop")
+  heroTitle          String   @default("品味純粹，始於此刻")
+  heroSubtitle       String   @default("探索我們為您精心打造的9999純金飾品系列")
+  reminderTitle      String   @default("⚠️ 重要提醒，請務必詳讀 ⚠️")
+  reminderItems      String   // 使用 String 來儲存 JSON 字串
+  footerText         String   @default("&copy; 2025 CHARLINe 純金飾品. All Rights Reserved.")
+  socialLinks        Json
+  promoPopup         Json
+  maintenanceMode    Boolean  @default(false)
+  maintenanceMessage String   @default("網站正在進行系統維護，暫時無法提供服務。請稍後再回來，感謝您的耐心等待。")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  orders    Order[]
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  price       Float
+  category    String
+  description String?
+  image       String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  Order_Item  Order_Item[]
+}
+
+model Order {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  status    String   @default("PENDING")
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  total     Float
+  items     Order_Item[]
+}
+
+model Order_Item {
+  id        Int      @id @default(autoincrement())
+  orderId   Int
+  order     Order    @relation(fields: [orderId], references: [id])
+  productId Int
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float
+}

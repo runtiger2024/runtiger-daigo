@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>代採購流程 - CHARLINe</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="header-logo">CHARLINe</a>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="products.html">所有商品</a>
+          <a href="daigou-request.html">代採購服務</a>
+          <a href="about.html">關於我們</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html">登入</a>
+          <a href="cart.html" class="cart-icon">
+            購物車
+            <span id="cart-item-count" class="cart-count">0</span>
+          </a>
+          <button class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">代採購服務流程</h1>
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8">
+          <h3>第一步：提交申請</h3>
+          <p>
+            請至我們的「代採購服務申請」頁面，填寫您希望我們為您尋找的商品資訊。提供的資訊越詳細（例如商品網址、圖片、型號、顏色），我們尋找的效率與準確率就越高。
+          </p>
+          <hr style="margin: 20px 0" />
+          <h3>第二步：專人報價</h3>
+          <p>
+            我們在收到您的申請後的 1-2 個工作天內，會有採購專員透過 Email
+            與您聯繫，並提供包含商品費用、服務費、預估國際運費在內的完整報價單。
+          </p>
+          <hr style="margin: 20px 0" />
+          <h3>第三步：支付款項</h3>
+          <p>
+            若您接受報價，我們會提供一個專屬的付款連結給您。完成付款後，我們將立即為您下訂商品。
+          </p>
+          <hr style="margin: 20px 0" />
+          <h3>第四步：商品寄送</h3>
+          <p>
+            商品採購完成並寄送到我們的海外倉庫後，我們會進行品質檢查與拍照確認，接著便會為您安排國際運送，將心愛的商品送到您的手中。
+          </p>
+          <br />
+          <a href="daigou-request.html" class="btn btn-primary">立即前往申請</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-socials" id="footer-socials"></div>
+        <p id="footer-text"></p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHARLINe 純金飾品</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="header-logo">CHARLINe</a>
+        <nav class="main-nav" id="main-nav">
+          <a href="products.html">所有商品</a
+          ><a href="daigou-request.html">代採購服務</a
+          ><a href="about.html">關於我們</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html">登入</a
+          ><a href="cart.html" class="cart-icon"
+            >購物車 <span id="cart-item-count" class="cart-count">0</span></a
+          ><button class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-bar"></span
+            ><span class="hamburger-bar"></span
+            ><span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="important-reminder">
+      <div class="container">
+        <h2 id="reminder-title"></h2>
+        <ol id="reminder-list"></ol>
+        <p class="app-download">
+          跑跑虎APP下載：
+          <a
+            href="https://apps.apple.com/tw/app/%E8%B7%91%E8%B7%91%E8%99%8E/id6742644160"
+            target="_blank"
+            >iOS 蘋果系統</a
+          >
+          |
+          <a
+            href="https://play.google.com/store/apps/details?id=com.paodekuai.runtigerglobal&pli=1"
+            target="_blank"
+            >Android 安卓系統</a
+          >
+        </p>
+      </div>
+    </section>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <h1 id="hero-title">品味純粹，始於此刻</h1>
+          <p id="hero-subtitle">探索我們為您精心打造的9999純金飾品系列</p>
+          <a href="products.html" class="btn btn-primary">立即選購</a>
+        </div>
+      </section>
+      <section class="featured-products">
+        <div class="container">
+          <h2>主打商品</h2>
+          <div id="featured-product-grid" class="product-grid"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-socials" id="footer-socials"></div>
+        <p id="footer-text"></p>
+        <p id="backend-message" style="margin-top: 10px; opacity: 0.7"></p>
+      </div>
+    </footer>
+    <script src="js/config.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

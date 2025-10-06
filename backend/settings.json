@@ -1,0 +1,31 @@
+{
+  "websiteName": "阿摸摸購物",
+  "primaryColor": "#FF5700",
+  "fontFamily": "'Noto Sans TC', sans-serif",
+  "enableDarkMode": false,
+  "maintenanceMode": false,
+  "maintenanceMessage": "網站正在進行系統維護，暫時無法提供服務。請稍後再回來，感謝您的耐心等待。",
+  "showReminderBox": true,
+  "heroImageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTUd6pEkjBAxySLc7c3K1uBdoHgLDwTJQWXWLa65fNa7HLoaeS5U9-dRZHiv4UnM3JFzCgoI5xf-iurTCktRxWmrz8uO7FD8wnhDNBgb4",
+  "heroTitle": "五月天",
+  "heroSubtitle": "最愛你",
+  "reminderTitle": "⚠️ 重要提醒，請務必詳讀 ⚠️",
+  "reminderItems": [
+    "<strong>關於價格：</strong>頁面顯示的【台幣價格】即為您需要支付的全部費用，已包含代購服務費。",
+    "<strong>關於運費：</strong>本站不經手任何運費。貨物送達後，您需自行登入「跑跑虎集運APP」支付國際運費。",
+    "<strong>關於出貨：</strong>請務必填寫正確的「跑跑虎集運」會員編號。"
+  ],
+  "footerText": "&copy; 2025 阿摸摸e 純金飾品. All Rights Reserved.",
+  "socialLinks": {
+    "facebook": "https://www.facebook.com",
+    "instagram": "https://www.instagram.com",
+    "line": "https://line.me/tw/"
+  },
+  "promoPopup": {
+    "enabled": true,
+    "title": "✨ 新品上市優惠 ✨",
+    "content": "全館消費滿 NT$5,000，立即享 95 折優惠！",
+    "buttonText": "立即選購",
+    "buttonLink": "products.html"
+  }
+}

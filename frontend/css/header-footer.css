@@ -1,0 +1,148 @@
+/* 頁首 Header */
+.main-header {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.main-nav a {
+  margin: 0 15px;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.header-actions a {
+  margin-left: 20px;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* 頁尾 Footer */
+.main-footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+/* === 響應式設計：漢堡選單 === */
+
+/* 預設隱藏漢堡按鈕 (電腦版) */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001; /* 確保在最上層 */
+}
+
+.hamburger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--dark-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 媒體查詢：當螢幕寬度 <= 768px 時 (適用於手機與平板) */
+@media (max-width: 768px) {
+  /* 隱藏原本的導覽列文字 */
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* 模糊背景 (iOS 風格) */
+    transform: translateX(100%); /* 預設藏在螢幕右側 */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* 當選單被打開時的樣式 (透過 JS 新增 .is-open) */
+  .main-nav.is-open {
+    transform: translateX(0);
+  }
+
+  .main-nav a {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    border-bottom: none; /* 移除電腦版的底線 */
+  }
+
+  /* 顯示漢堡按鈕 */
+  .hamburger-menu {
+    display: block;
+    margin-left: 15px;
+  }
+
+  /* 讓電腦版的登入連結在手機上隱藏 (可選) */
+  .header-actions > a[href="login.html"] {
+    display: none;
+  }
+}
+/* 頁尾社群連結 */
+.footer-socials {
+  margin-bottom: 20px;
+}
+
+.footer-socials a {
+  margin: 0 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--light-color);
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-socials a:hover {
+  opacity: 1;
+}

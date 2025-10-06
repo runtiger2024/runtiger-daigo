@@ -1,0 +1,181 @@
+/* Google Fonts - Noto Sans TC */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
+
+/* CSS 變數定義 (淺色模式) */
+:root {
+  --primary-color: #ff5700;
+  --dark-color: #333333;
+  --light-color: #ffffff;
+  --grey-color: #f4f4f4;
+  --border-color: #dddddd;
+  --font-family: "Noto Sans TC", sans-serif;
+  --container-width: 1200px;
+}
+
+/* 深色模式變數覆寫 */
+body.dark-mode {
+  --dark-color: #f4f4f4;
+  --light-color: #1a1a1a;
+  --grey-color: #2c2c2c;
+  --border-color: #444444;
+}
+
+/* 全域重置與基礎樣式 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.page-title {
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+/* 按鈕樣式 */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  filter: brightness(90%);
+}
+.btn-secondary {
+  background-color: transparent;
+  color: var(--dark-color);
+  border-color: var(--border-color);
+}
+.btn-secondary:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+/* 彈出式公告 Modal 樣式 (新增) */
+.promo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.promo-modal-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+.promo-modal {
+  background: var(--light-color);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s;
+}
+.promo-modal-overlay.is-visible .promo-modal {
+  transform: translateY(0);
+}
+.promo-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--dark-color);
+}
+.promo-modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+.promo-modal p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* 維護模式樣式 (新增) */
+.maintenance-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+.maintenance-container h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+/* ===== Toast 提示框樣式 ===== */
+.toast-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 25px;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+.toast-notification.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+/* ===== 飛入購物車動畫 ===== */
+.fly-to-cart {
+  position: absolute;
+  z-index: 2500;
+  border-radius: 50%;
+  transition: all 1s ease-in-out;
+}

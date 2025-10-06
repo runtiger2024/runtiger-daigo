@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搜尋結果 - CHARLINe</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/products.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="header-logo">CHARLINe</a>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="products.html">所有商品</a>
+          <a href="daigou-request.html">代採購服務</a>
+          <a href="about.html">關於我們</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html">登入</a>
+          <a href="cart.html" class="cart-icon">
+            購物車
+            <span id="cart-item-count" class="cart-count">0</span>
+          </a>
+          <button class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">搜尋 “戒指” 的結果</h1>
+        <p style="text-align: center; margin-bottom: 40px">
+          為您找到 1 個相關商品。
+        </p>
+
+        <div class="product-grid" style="max-width: 320px; margin: 0 auto">
+          <div class="product-card">
+            <a href="product-detail.html?id=2">
+              <img
+                src="https://images.unsplash.com/photo-1605001438362-e73a0a194569?q=80&w=1974&auto=format&fit=crop"
+                alt="簡約主義純金戒指"
+                class="product-image"
+              />
+              <div class="product-info">
+                <h3 class="product-name">簡約主義純金戒指</h3>
+                <p class="product-price">NT$ 5,200</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-socials" id="footer-socials"></div>
+        <p id="footer-text"></p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

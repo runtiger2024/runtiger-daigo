@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常見問題 - CHARLINe</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <style>
+      .faq-item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px 0;
+      }
+      .faq-item summary {
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+        list-style: none; /* 移除預設箭頭 */
+      }
+      .faq-item summary::-webkit-details-marker {
+        display: none; /* 移除預設箭頭 for Safari */
+      }
+      .faq-item summary::after {
+        content: "+";
+        float: right;
+      }
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+      .faq-item div {
+        padding: 15px 0 0 15px;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="header-logo">CHARLINe</a>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="products.html">所有商品</a>
+          <a href="daigou-request.html">代採購服務</a>
+          <a href="about.html">關於我們</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html">登入</a>
+          <a href="cart.html" class="cart-icon">
+            購物車
+            <span id="cart-item-count" class="cart-count">0</span>
+          </a>
+          <button class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">常見問題</h1>
+        <div style="max-width: 800px; margin: 0 auto">
+          <details class="faq-item">
+            <summary>你們的黃金是純金嗎？</summary>
+            <div>
+              <p>
+                是的，我們全店商品均採用 9999 純金（亦稱千足金）製作，純度高達
+                99.99%，確保最高的品質與價值。
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>請問訂單成立後多久會出貨？</summary>
+            <div>
+              <p>
+                現貨商品我們會在 1-3 個工作天內為您寄出。訂製或預購商品則需 7-14
+                個工作天，具體時間會於商品頁面註明。
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>有提供售後維修或保養服務嗎？</summary>
+            <div>
+              <p>
+                我們提供終身的飾品清潔與基礎保養服務。若因人為因素造成損壞，我們也提供付費維修服務，您可以攜帶商品與保證卡至我們的實體店面，或聯繫線上客服。
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>代採購服務如何收費？</summary>
+            <div>
+              <p>
+                代採購服務費為商品總金額的
+                10%，國際運費另計。我們會在報價單中清楚列出所有費用，在您確認並付款前，不會有任何隱藏收費。
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-socials" id="footer-socials"></div>
+        <p id="footer-text"></p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

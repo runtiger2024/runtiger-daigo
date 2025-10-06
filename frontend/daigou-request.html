@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>代採購服務 - CHARLINe</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="header-logo">CHARLINe</a>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="products.html">所有商品</a>
+          <a href="daigou-request.html">代採購服務</a>
+          <a href="about.html">關於我們</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html">登入</a>
+          <a href="cart.html" class="cart-icon">
+            購物車
+            <span id="cart-item-count" class="cart-count">0</span>
+          </a>
+          <button class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">代採購服務申請</h1>
+        <div class="form-container">
+          <p style="margin-bottom: 20px; text-align: center">
+            找不到您想要的商品嗎？請在此處提供商品資訊，我們將有專人為您報價與採購。
+            <a href="daigou-process.html" style="color: var(--primary-color)"
+              >了解流程 ></a
+            >
+          </p>
+          <form>
+            <div class="form-group">
+              <label for="name">您的稱呼</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">電子郵件</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="product-link">商品網址 (如有)</label>
+              <input type="url" id="product-link" name="product-link" />
+            </div>
+            <div class="form-group">
+              <label for="description">商品描述</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                placeholder="請盡量詳細描述商品名稱、規格、顏色、數量等..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%">
+              送出代購申請
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-socials" id="footer-socials"></div>
+        <p id="footer-text"></p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

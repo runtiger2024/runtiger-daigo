@@ -1,0 +1,3 @@
+# 忽略控制台相關檔案
+admin.html
+js/admin.js

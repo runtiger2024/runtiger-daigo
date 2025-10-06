@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歷史訂單 - CHARLINe</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="header-logo">CHARLINe</a>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="products.html">所有商品</a>
+          <a href="daigou-request.html">代採購服務</a>
+          <a href="about.html">關於我們</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html">登入</a>
+          <a href="cart.html" class="cart-icon">
+            購物車
+            <span id="cart-item-count" class="cart-count">0</span>
+          </a>
+          <button class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">歷史訂單</h1>
+        <div class="account-container">
+          <table class="order-history-table">
+            <thead>
+              <tr>
+                <th>訂單編號</th>
+                <th>日期</th>
+                <th>總金額</th>
+                <th>狀態</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="#" style="color: var(--primary-color)"
+                    >C20251005001</a
+                  >
+                </td>
+                <td>2025-10-05</td>
+                <td>NT$ 15,300</td>
+                <td>已出貨</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" style="color: var(--primary-color)"
+                    >C20250918012</a
+                  >
+                </td>
+                <td>2025-09-18</td>
+                <td>NT$ 5,200</td>
+                <td>已完成</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <a href="account.html">< 返回我的帳戶</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-socials" id="footer-socials"></div>
+        <p id="footer-text"></p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+/* 首頁 Hero Section */
+.hero-section {
+  height: 60vh;
+  /* 移除固定的 background-image，改由 JS 動態設定 */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--light-color);
+  transition: background-image 0.5s ease; /* 新增過渡效果 */
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* 主打商品區塊 */
+.featured-products {
+  padding: 60px 0;
+}
+
+.featured-products h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* (重要提醒區塊樣式請保留不變) */
+.important-reminder {
+  margin: 20px 0;
+}
+.important-reminder .container {
+  max-width: 900px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  padding: 30px 40px;
+  color: #856404;
+}
+.important-reminder h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.important-reminder ol {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: reminder-counter;
+}
+.important-reminder li {
+  counter-increment: reminder-counter;
+  margin-bottom: 15px;
+  line-height: 1.7;
+  padding-left: 35px;
+  position: relative;
+}
+.important-reminder li::before {
+  content: counter(reminder-counter) ".";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.important-reminder strong {
+  font-weight: 600;
+}
+.important-reminder .app-download {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.important-reminder .app-download a {
+  color: #007bff;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .important-reminder .container {
+    padding: 25px 20px;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>後台主控台</title>
+    <link rel="stylesheet" href="/admin.css" />
+  </head>
+  <body>
+    <script>
+      if (sessionStorage.getItem("isAdminAuthenticated") !== "true")
+        window.location.href = "/admin-login.html";
+    </script>
+
+    <div class="sidebar">
+      <h2>網站後台</h2>
+      <nav>
+        <a href="#dashboard" class="active">儀表板</a>
+        <a href="#products">商品管理</a>
+        <a href="#orders">訂單管理</a>
+        <a href="#users">會員管理</a>
+        <a href="#settings">網站設定</a>
+        <a href="/" target="_blank">預覽前台</a>
+      </nav>
+    </div>
+
+    <div class="main-content">
+      <section id="dashboard">
+        <h1>儀表板</h1>
+        <div class="content-section">
+          <h2>網站數據速覽</h2>
+          <div class="stat-cards" id="stat-cards-container">
+            <p>載入中...</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" style="display: none">
+        <h1>商品管理</h1>
+        <div class="content-section">
+          <h2>新增商品</h2>
+          <form id="add-product-form" class="form-grid"></form>
+        </div>
+        <div class="content-section">
+          <h2>現有商品列表</h2>
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>商品名稱</th>
+                <th>價格 (NT$)</th>
+                <th>分類</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="product-list-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="orders" style="display: none">
+        <h1>訂單管理</h1>
+        <div class="content-section">
+          <h2>所有訂單紀錄</h2>
+          <table id="order-list-table" class="product-table"></table>
+        </div>
+      </section>
+
+      <section id="users" style="display: none">
+        <h1>會員管理</h1>
+        <div class="content-section">
+          <h2>所有會員列表</h2>
+          <table id="user-list-table" class="product-table"></table>
+        </div>
+      </section>
+
+      <section id="settings" style="display: none">
+        <h1>網站設定</h1>
+        <div class="content-section">
+          <form id="settings-form"></form>
+        </div>
+      </section>
+
+      <button id="save-settings-button" class="btn-save-fixed">
+        儲存所有設定
+      </button>
+    </div>
+
+    <script src="/js/admin-dashboard.js"></script>
+  </body>
+</html>
